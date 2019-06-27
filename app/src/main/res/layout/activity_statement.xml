@@ -20,18 +20,18 @@
             android:id="@+id/activity_statement_tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome"
             android:textColor="@android:color/white"
             android:textSize="@dimen/text_size_default_24"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nome" />
 
         <TextView
             android:id="@+id/activity_statement_tv_label_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Conta"
+            android:layout_marginTop="@dimen/margin_default_24"
+            android:text="@string/account"
             android:textColor="@android:color/white"
             app:layout_constraintStart_toStartOf="@+id/activity_statement_tv_name"
             app:layout_constraintTop_toBottomOf="@id/activity_statement_tv_name" />
@@ -40,18 +40,18 @@
             android:id="@+id/activity_statement_tv_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2050 / 01.111222-4"
             android:textColor="@android:color/white"
             android:textSize="@dimen/text_size_default_24"
             app:layout_constraintStart_toStartOf="@+id/activity_statement_tv_name"
-            app:layout_constraintTop_toBottomOf="@id/activity_statement_tv_label_account" />
+            app:layout_constraintTop_toBottomOf="@id/activity_statement_tv_label_account"
+            tools:text="2050 / 01.111222-4" />
 
         <TextView
             android:id="@+id/activity_statement_tv_label_balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Saldo"
+            android:layout_marginTop="@dimen/margin_default_24"
+            android:text="@string/balance"
             android:textColor="@android:color/white"
             app:layout_constraintStart_toStartOf="@+id/activity_statement_tv_name"
             app:layout_constraintTop_toBottomOf="@id/activity_statement_tv_account" />
@@ -60,11 +60,12 @@
             android:id="@+id/activity_statement_tv_balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="R$ 1.000,00"
             android:textColor="@android:color/white"
             android:textSize="@dimen/text_size_default_24"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/activity_statement_tv_name"
-            app:layout_constraintTop_toBottomOf="@id/activity_statement_tv_label_balance" />
+            app:layout_constraintTop_toBottomOf="@id/activity_statement_tv_label_balance"
+            tools:text="R$ 1.000,00" />
 
         <Button
             android:id="@+id/activity_statement_bt_logout"
@@ -89,7 +90,7 @@
             android:id="@+id/activity_statement_tv_label_recent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recentes"
+            android:text="@string/recent"
             android:textSize="@dimen/text_size_default_18"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +99,7 @@
         <android.support.v7.widget.RecyclerView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/margin_default_8"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

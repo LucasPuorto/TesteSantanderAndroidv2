@@ -17,4 +17,7 @@
 
     <dimen name="corners_radius_default_10">10dp</dimen>
     <dimen name="text_size_default_24">24sp</dimen>
+    <dimen name="margin_default_24">24dp</dimen>
+    <dimen name="margin_default_8">8dp</dimen>
+    <dimen name="height_default_90">90dp</dimen>
 </resources>
