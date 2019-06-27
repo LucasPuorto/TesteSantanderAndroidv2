@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width_default_2">2dp</dimen>
+    <dimen name="width_default_202">202dp</dimen>
+
+    <dimen name="height_default_62">62dp</dimen>
+
+    <dimen name="margin_default_16">16dp</dimen>
+    <dimen name="margin_default_32">32dp</dimen>
+    <dimen name="margin_default_48">48dp</dimen>
+    <dimen name="margin_default_96">96dp</dimen>
+
+    <dimen name="padding_default_10">10dp</dimen>
+    <dimen name="padding_default_16">16dp</dimen>
+
+    <dimen name="text_size_default_18">18sp</dimen>
+
+    <dimen name="corners_radius_default_10">10dp</dimen>
+</resources>
