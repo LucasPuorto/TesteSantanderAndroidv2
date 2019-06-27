@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatementActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint_layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/padding_default_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/activity_statement_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_default_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/activity_statement_tv_label_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Conta"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="@+id/activity_statement_tv_name"
+            app:layout_constraintTop_toBottomOf="@id/activity_statement_tv_name" />
+
+        <TextView
+            android:id="@+id/activity_statement_tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2050 / 01.111222-4"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_default_24"
+            app:layout_constraintStart_toStartOf="@+id/activity_statement_tv_name"
+            app:layout_constraintTop_toBottomOf="@id/activity_statement_tv_label_account" />
+
+        <TextView
+            android:id="@+id/activity_statement_tv_label_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Saldo"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="@+id/activity_statement_tv_name"
+            app:layout_constraintTop_toBottomOf="@id/activity_statement_tv_account" />
+
+        <TextView
+            android:id="@+id/activity_statement_tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ 1.000,00"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_default_24"
+            app:layout_constraintStart_toStartOf="@+id/activity_statement_tv_name"
+            app:layout_constraintTop_toBottomOf="@id/activity_statement_tv_label_balance" />
+
+        <Button
+            android:id="@+id/activity_statement_bt_logout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/logout"
+            app:layout_constraintBaseline_toBaselineOf="@id/activity_statement_tv_name"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint_layout_recent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/padding_default_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_layout_header">
+
+        <TextView
+            android:id="@+id/activity_statement_tv_label_recent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recentes"
+            android:textSize="@dimen/text_size_default_18"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_statement_tv_label_recent"
+            tools:listitem="@layout/activity_statement_recycler_view" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

@@ -16,4 +16,5 @@
     <dimen name="text_size_default_18">18sp</dimen>
 
     <dimen name="corners_radius_default_10">10dp</dimen>
+    <dimen name="text_size_default_24">24sp</dimen>
 </resources>
