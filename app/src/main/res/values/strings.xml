@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TesteSantanderAndroidv2</string>
+    <string name="app_name">Teste Santander</string>
     <string name="user">User</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
