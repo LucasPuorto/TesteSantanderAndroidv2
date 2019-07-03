@@ -24,7 +24,7 @@
         android:layout_marginTop="@dimen/margin_default_96"
         android:background="@drawable/edit_text_border"
         android:inputType="text"
-        android:text="@string/user"
+        android:hint="@string/user"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/activity_login_img_logo" />
@@ -36,7 +36,7 @@
         android:layout_marginTop="@dimen/margin_default_16"
         android:background="@drawable/edit_text_border"
         android:inputType="textPassword"
-        android:text="@string/password"
+        android:hint="@string/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/activity_login_et_user" />

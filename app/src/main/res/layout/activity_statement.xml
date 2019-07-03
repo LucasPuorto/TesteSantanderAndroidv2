@@ -44,29 +44,7 @@
             android:textSize="@dimen/text_size_default_24"
             app:layout_constraintStart_toStartOf="@+id/activity_statement_tv_name"
             app:layout_constraintTop_toBottomOf="@id/activity_statement_tv_label_account"
-            tools:text="2050" />
-
-        <TextView
-            android:id="@+id/activity_statement_tv_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_default_8"
-            android:text="@string/account_agency_label"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/text_size_default_24"
-            app:layout_constraintBaseline_toBaselineOf="@id/activity_statement_tv_account"
-            app:layout_constraintStart_toEndOf="@id/activity_statement_tv_account" />
-
-        <TextView
-            android:id="@+id/activity_statement_tv_agency"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_default_8"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/text_size_default_24"
-            app:layout_constraintBaseline_toBaselineOf="@id/activity_statement_tv_account"
-            app:layout_constraintStart_toEndOf="@id/activity_statement_tv_label"
-            tools:text="01.111222-4" />
+            tools:text="2050 / 01.111222-4" />
 
         <TextView
             android:id="@+id/activity_statement_tv_label_balance"

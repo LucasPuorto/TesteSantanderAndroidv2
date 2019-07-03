@@ -20,5 +20,7 @@ class Constants {
         const val USER_ACCOUNT_BANK_ACCOUNT = "bankAccount"
         const val USER_ACCOUNT_AGENCY = "agency"
         const val USER_ACCOUNT_BALANCE = "balance"
+
+        const val DATE_FORMAT_BR = "dd/MM/yyyy"
     }
 }

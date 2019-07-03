@@ -1,5 +1,6 @@
 package com.example.testesantanderandroidv2.extension
 
+import com.example.testesantanderandroidv2.utils.Constants.Companion.DATE_FORMAT_BR
 import java.math.BigDecimal
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
@@ -12,6 +13,7 @@ fun formatForBrazilianCurrency(value: BigDecimal): String {
 }
 
 fun formatForBrazilianDate(date: Date): String {
-    val format = SimpleDateFormat("dd/MM/yyyy")
+    val format = SimpleDateFormat(DATE_FORMAT_BR)
     return format.format(date)
 }
+

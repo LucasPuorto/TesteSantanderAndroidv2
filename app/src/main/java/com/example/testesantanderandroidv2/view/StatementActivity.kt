@@ -62,10 +62,6 @@ class StatementActivity : AppCompatActivity() {
     private fun recoverUser() {
         val service: CallApi = RetrofitClientInstance.getRetrofitInstance()
         service.getUser(API_USER, API_PASSWORD).enqueue(object : Callback<UserResponse> {
-            override fun onFailure(call: Call<UserResponse>, t: Throwable) {
-
-            }
-
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                 if (response.isSuccessful) {
                     val userResponse = response.body()
@@ -73,22 +69,20 @@ class StatementActivity : AppCompatActivity() {
                     setUserInformation(user)
                 }
             }
+
+            override fun onFailure(call: Call<UserResponse>, t: Throwable) {}
         })
     }
 
     private fun setUserInformation(user: User) {
         activity_statement_tv_name.text = user.name
-        activity_statement_tv_account.text = user.bankAccount
-        activity_statement_tv_agency.text = user.agency
+        activity_statement_tv_account.text = (user.bankAccount + " / " + user.agency)
         activity_statement_tv_balance.text = formatForBrazilianCurrency(user.balance)
     }
 
     private fun recoverStatementList() {
         val service: CallApi = RetrofitClientInstance.getRetrofitInstance()
         service.getStatement().enqueue(object : Callback<StatementResponse> {
-            override fun onFailure(call: Call<StatementResponse>, t: Throwable) {
-            }
-
             override fun onResponse(call: Call<StatementResponse>, response: Response<StatementResponse>) {
                 if (response.isSuccessful) {
                     val statementResponse = response.body()
@@ -96,6 +90,8 @@ class StatementActivity : AppCompatActivity() {
                     setRecyclerView()
                 }
             }
+
+            override fun onFailure(call: Call<StatementResponse>, t: Throwable) {}
         })
     }
 
