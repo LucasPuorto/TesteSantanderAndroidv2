@@ -22,5 +22,9 @@ class Constants {
         const val USER_ACCOUNT_BALANCE = "balance"
 
         const val DATE_FORMAT_BR = "dd/MM/yyyy"
+
+        const val PATTERN_SPECIAL_CHARACTERS = "[$&+,:;=?@#|'<>.-^*()%!]"
+        const val PATTERN_UPPER_CASE = "[A-Z]"
+        const val PATTERN_NUMBER = "[0-9]"
     }
 }

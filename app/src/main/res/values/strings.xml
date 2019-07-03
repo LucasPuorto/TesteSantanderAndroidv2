@@ -10,4 +10,6 @@
     <string name="no">NÃO</string>
     <string name="alertDetailsLogoutTitle">Sair da conta</string>
     <string name="alertDetailsLogoutMessage">Realmente deseja sair de sua conta?</string>
+    <string name="invalid_user">Usuário invalido</string>
+    <string name="password_without_minimum_requirements">Senha sem requisitos mínimos</string>
 </resources>
