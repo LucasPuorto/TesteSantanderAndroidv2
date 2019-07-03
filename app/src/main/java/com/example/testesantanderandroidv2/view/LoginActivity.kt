@@ -1,8 +1,9 @@
-package com.example.testesantanderandroidv2
+package com.example.testesantanderandroidv2.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.example.testesantanderandroidv2.R
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {

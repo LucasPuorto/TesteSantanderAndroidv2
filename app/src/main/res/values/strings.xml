@@ -6,4 +6,9 @@
     <string name="account">Conta</string>
     <string name="balance">Saldo</string>
     <string name="recent">Recentes</string>
+    <string name="account_agency_label">/</string>
+    <string name="yes">SIM</string>
+    <string name="no">NÃO</string>
+    <string name="alertDetailsLogoutTitle">Sair da conta</string>
+    <string name="alertDetailsLogoutMessage">Realmente deseja sair de sua conta?</string>
 </resources>

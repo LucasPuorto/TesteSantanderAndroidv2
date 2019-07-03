@@ -1,4 +1,4 @@
-package com.example.testesantanderandroidv2
+package com.example.testesantanderandroidv2.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -6,12 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.example.testesantanderandroidv2.R
+import com.example.testesantanderandroidv2.extension.*
+import com.example.testesantanderandroidv2.model.Statement
 import kotlinx.android.synthetic.main.activity_statement_recycler_view.view.*
-import java.util.ArrayList
 
-//private val recentList: ArrayList<Recents>
-
-class StatementAdapter(private val context: Context) :
+class StatementAdapter(private val context: Context, private val statementList: ArrayList<Statement>) :
         RecyclerView.Adapter<StatementAdapter.StatementViewHolder>() {
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): StatementViewHolder {
@@ -22,29 +22,22 @@ class StatementAdapter(private val context: Context) :
     }
 
     override fun getItemCount(): Int {
-//        return recentList.size
-        return 20
+        return statementList.size
     }
 
     override fun onBindViewHolder(p0: StatementViewHolder, position: Int) {
-//        val recent = recentList[position]
+        val statement = statementList[position]
 
-//        p0.title.text = recent.title
-//        p0.date.text = recent.date
-//        p0.description.text = recent.description
-//        p0.value.text = recent.value.toString()
-
-        p0.title.text = "Pagamento"
-        p0.date.text = "01/05/2019"
-        p0.description.text = "aliança"
-        p0.value.text = "R$ 200,00"
-
+        p0.title.text = statement.title
+        p0.date.text = formatForBrazilianDate(statement.date)
+        p0.desc.text = statement.desc
+        p0.value.text = formatForBrazilianCurrency(statement.value)
     }
 
     inner class StatementViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title: TextView = itemView.activity_statement_recycler_view_title
         val date: TextView = itemView.activity_statement_recycler_view_date
-        val description: TextView = itemView.activity_statement_recycler_view_description
+        val desc: TextView = itemView.activity_statement_recycler_view_description
         val value: TextView = itemView.activity_statement_recycler_view_value
     }
 }
