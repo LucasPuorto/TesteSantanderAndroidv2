@@ -13,7 +13,6 @@ import com.example.testesantanderandroidv2.extension.formatForBrazilianCurrency
 import com.example.testesantanderandroidv2.model.Statement
 import com.example.testesantanderandroidv2.model.StatementResponse
 import com.example.testesantanderandroidv2.model.User
-import com.example.testesantanderandroidv2.utils.Constants.Companion.SERIALIZABLE_STATEMENT_LIST
 import com.example.testesantanderandroidv2.utils.Constants.Companion.SERIALIZABLE_USER
 import kotlinx.android.synthetic.main.activity_statement.*
 import retrofit2.Call
@@ -22,6 +21,7 @@ import retrofit2.Response
 
 class StatementActivity : AppCompatActivity() {
 
+    private var idUser: String = ""
     private lateinit var statementList: ArrayList<Statement>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,14 +59,15 @@ class StatementActivity : AppCompatActivity() {
     private fun setUserInformation() {
         val user = intent.extras.get(SERIALIZABLE_USER) as User
 
+        idUser = user.userId.toString()
         activity_statement_tv_name.text = user.name
-        activity_statement_tv_account.text = (user.bankAccount + " / " + user.agency)
+        activity_statement_tv_account_agency.text = (user.bankAccount + " / " + user.agency)
         activity_statement_tv_balance.text = formatForBrazilianCurrency(user.balance)
     }
 
     private fun recoverStatementList() {
         val service: CallApi = RetrofitClientInstance.getRetrofitInstance()
-        service.getStatement().enqueue(object : Callback<StatementResponse> {
+        service.getStatementList(idUser).enqueue(object : Callback<StatementResponse> {
             override fun onResponse(call: Call<StatementResponse>, response: Response<StatementResponse>) {
                 if (response.isSuccessful) {
                     val statementResponse = response.body()

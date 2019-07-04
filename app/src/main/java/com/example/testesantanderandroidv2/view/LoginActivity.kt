@@ -11,6 +11,8 @@ import com.example.testesantanderandroidv2.model.User
 import com.example.testesantanderandroidv2.model.UserResponse
 import com.example.testesantanderandroidv2.utils.CPFUtil
 import com.example.testesantanderandroidv2.utils.Constants
+import com.example.testesantanderandroidv2.utils.Constants.Companion.API_PASSWORD
+import com.example.testesantanderandroidv2.utils.Constants.Companion.API_USER
 import com.example.testesantanderandroidv2.utils.Constants.Companion.PATTERN_NUMBER
 import com.example.testesantanderandroidv2.utils.Constants.Companion.PATTERN_SPECIAL_CHARACTERS
 import com.example.testesantanderandroidv2.utils.Constants.Companion.PATTERN_UPPER_CASE
@@ -70,7 +72,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun recoverUser() {
         val service: CallApi = RetrofitClientInstance.getRetrofitInstance()
-        service.getUser(Constants.API_USER, Constants.API_PASSWORD).enqueue(object : Callback<UserResponse> {
+        service.getUserAccount(API_USER, API_PASSWORD).enqueue(object : Callback<UserResponse> {
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                 if (response.isSuccessful) {
                     val userResponse = response.body()

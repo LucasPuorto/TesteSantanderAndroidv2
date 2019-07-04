@@ -7,17 +7,16 @@ import com.example.testesantanderandroidv2.utils.Constants.Companion.API_PARAM_U
 import com.example.testesantanderandroidv2.utils.Constants.Companion.API_PASSWORD
 import com.example.testesantanderandroidv2.utils.Constants.Companion.API_USER
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface CallApi {
 
-    @GET(API_PARAM_STATEMENT)
-    fun getStatement(): Call<StatementResponse>
+    @GET("$API_PARAM_STATEMENT{idUser}")
+    fun getStatementList(
+            @Path("idUser") idUser: String): Call<StatementResponse>
 
     @FormUrlEncoded
     @POST(API_PARAM_USER)
-    fun getUser(@Field(API_USER) user: String, @Field(API_PASSWORD) password: String): Call<UserResponse>
+    fun getUserAccount(@Field(API_USER) user: String,
+                       @Field(API_PASSWORD) password: String): Call<UserResponse>
 }
