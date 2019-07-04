@@ -1,5 +1,7 @@
 package com.example.testesantanderandroidv2.utils
 
+import java.io.Serializable
+
 class Constants {
     companion object {
         const val API_URL = "https://bank-app-test.herokuapp.com/api/"
@@ -13,6 +15,8 @@ class Constants {
         const val STATEMENT_LIST_DATE = "date"
         const val STATEMENT_LIST_DESCRIPTION = "desc"
         const val STATEMENT_LIST_VALUE = "value"
+
+        const val SERIALIZABLE_USER = "user"
 
         const val SERIALIZABLE_USER_ACCOUNT = "userAccount"
         const val USER_ACCOUNT_USER_ID = "userId"
