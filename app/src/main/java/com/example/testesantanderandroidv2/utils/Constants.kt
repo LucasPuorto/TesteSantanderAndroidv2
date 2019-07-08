@@ -8,15 +8,15 @@ class Constants {
         const val API_USER = "user"
         const val API_PASSWORD = "password"
 
-        const val SERIALIZABLE_STATEMENT_LIST = "statementList"
+        const val USER = "user"
+
+        const val STATEMENT_LIST = "statementList"
         const val STATEMENT_LIST_TITLE = "title"
         const val STATEMENT_LIST_DATE = "date"
         const val STATEMENT_LIST_DESCRIPTION = "desc"
         const val STATEMENT_LIST_VALUE = "value"
 
-        const val SERIALIZABLE_USER = "user"
-
-        const val SERIALIZABLE_USER_ACCOUNT = "userAccount"
+        const val USER_ACCOUNT = "userAccount"
         const val USER_ACCOUNT_USER_ID = "userId"
         const val USER_ACCOUNT_NAME = "name"
         const val USER_ACCOUNT_BANK_ACCOUNT = "bankAccount"
