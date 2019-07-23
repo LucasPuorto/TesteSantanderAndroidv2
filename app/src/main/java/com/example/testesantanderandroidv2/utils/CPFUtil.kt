@@ -57,11 +57,11 @@ class CPFUtil {
                 p++
             }
             //Verify the nineth digit
-            var dvForeleventhDigit = sumProductTen.sum() % 11
-            dvForeleventhDigit = 11 - dvForeleventhDigit //rule for tenth digit
-            if (dvForeleventhDigit > 9)
-                dvForeleventhDigit = 0
-            if (dvForeleventhDigit != dvCurrent11)
+            var dvForEleventhDigit = sumProductTen.sum() % 11
+            dvForEleventhDigit = 11 - dvForEleventhDigit //rule for tenth digit
+            if (dvForEleventhDigit > 9)
+                dvForEleventhDigit = 0
+            if (dvForEleventhDigit != dvCurrent11)
                 return false
 
             return true
