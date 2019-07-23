@@ -9,15 +9,17 @@ import android.widget.TextView
 import com.example.testesantanderandroidv2.R
 import com.example.testesantanderandroidv2.extension.*
 import com.example.testesantanderandroidv2.model.Statement
-import kotlinx.android.synthetic.main.activity_statement_recycler_view.view.*
+import kotlinx.android.synthetic.main.activity_statement_recycler_view_item.view.*
 
-class StatementAdapter(private val context: Context, private val statementList: ArrayList<Statement>) :
+class StatementAdapter(
+        private val context: Context,
+        private val statementList: ArrayList<Statement>) :
         RecyclerView.Adapter<StatementAdapter.StatementViewHolder>() {
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): StatementViewHolder {
         val view = LayoutInflater
                 .from(context)
-                .inflate(R.layout.activity_statement_recycler_view, p0, false)
+                .inflate(R.layout.activity_statement_recycler_view_item, p0, false)
         return StatementViewHolder(view)
     }
 
